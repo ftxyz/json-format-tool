@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter Tool - Online String to JSON, JSON Format Validator</title>
+    <meta name="description" content="Professional online JSON formatter tool, supports string to JSON conversion, JSON formatting, JSON validation, JSON compression. Free, fast, and secure JSON processing tool.">
+    <meta name="keywords" content="JSON formatter,JSON tool,string to JSON,JSON validator,JSON compressor,online JSON tool,JSON beautifier">
+    <meta name="author" content="JSON Formatter Tool">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Language alternatives -->
+    <link rel="alternate" hreflang="zh-CN" href="https://jsonformat.top/" />
+    <link rel="alternate" hreflang="en" href="https://jsonformat.top/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://jsonformat.top/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jsonformat.top/en/">
+    <meta property="og:title" content="JSON Formatter Tool - Online String to JSON, JSON Format Validator">
+    <meta property="og:description" content="Professional online JSON formatter tool, supports string to JSON conversion, JSON formatting, JSON validation, JSON compression.">
+    <meta property="og:image" content="https://jsonformat.top/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jsonformat.top/en/">
+    <meta property="twitter:title" content="JSON Formatter Tool - Online String to JSON, JSON Format Validator">
+    <meta property="twitter:description" content="Professional online JSON formatter tool, supports string to JSON conversion, JSON formatting, JSON validation, JSON compression.">
+    <meta property="twitter:image" content="https://jsonformat.top/twitter-image.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JSON Formatter Tool",
+        "description": "Professional online JSON formatter tool, supports string to JSON conversion, JSON formatting, JSON validation, JSON compression.",
+        "url": "https://jsonformat.top/en",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "JSON Formatter Tool"
+        },
+        "inLanguage": "en"
+    }
+    </script>
+    
+    <link rel="canonical" href="https://jsonformat.top/en/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>JSON Formatter Tool</h1>
+            <p class="subtitle">Professional online JSON processing tool, supports string to JSON, formatting, validation and more</p>
+            <div class="language-switch">
+                <a href="/">中文</a> | <a href="/en/" class="active">English</a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="tool-section">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="format">Format JSON</button>
+                    <button class="tab-btn" data-tab="stringify">String to JSON</button>
+                    <button class="tab-btn" data-tab="validate">Validate JSON</button>
+                    <button class="tab-btn" data-tab="compress">Compress JSON</button>
+                </div>
+                
+                <div class="tab-content active" id="format">
+                    <h2>JSON Formatter</h2>
+                    <div class="input-section">
+                        <label for="json-input">Enter JSON string:</label>
+                        <textarea id="json-input" placeholder="Enter the JSON string to format..." rows="10"></textarea>
+                        <div class="button-group">
+                            <button id="format-btn" class="btn btn-primary">Format JSON</button>
+                            <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                            <button id="copy-btn" class="btn btn-success">Copy Result</button>
+                        </div>
+                    </div>
+                    
+                    <div class="output-section">
+                        <label for="json-output">Formatted result:</label>
+                        <textarea id="json-output" readonly rows="10"></textarea>
+                        <div class="status" id="status"></div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="stringify">
+                    <h2>String to JSON</h2>
+                    <div class="input-section">
+                        <label for="string-input">Enter string:</label>
+                        <textarea id="string-input" placeholder="Enter the string to convert to JSON..." rows="10"></textarea>
+                        <div class="button-group">
+                            <button id="stringify-btn" class="btn btn-primary">Convert to JSON</button>
+                            <button id="clear-string-btn" class="btn btn-secondary">Clear</button>
+                            <button id="copy-string-btn" class="btn btn-success">Copy Result</button>
+                        </div>
+                    </div>
+                    
+                    <div class="output-section">
+                        <label for="string-output">Conversion result:</label>
+                        <textarea id="string-output" readonly rows="10"></textarea>
+                        <div class="status" id="string-status"></div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="validate">
+                    <h2>JSON Validator</h2>
+                    <div class="input-section">
+                        <label for="validate-input">Enter JSON string:</label>
+                        <textarea id="validate-input" placeholder="Enter the JSON string to validate..." rows="10"></textarea>
+                        <div class="button-group">
+                            <button id="validate-btn" class="btn btn-primary">Validate JSON</button>
+                            <button id="clear-validate-btn" class="btn btn-secondary">Clear</button>
+                        </div>
+                    </div>
+                    
+                    <div class="validation-result" id="validation-result"></div>
+                </div>
+                
+                <div class="tab-content" id="compress">
+                    <h2>JSON Compressor</h2>
+                    <div class="input-section">
+                        <label for="compress-input">Enter JSON string:</label>
+                        <textarea id="compress-input" placeholder="Enter the JSON string to compress..." rows="10"></textarea>
+                        <div class="button-group">
+                            <button id="compress-btn" class="btn btn-primary">Compress JSON</button>
+                            <button id="clear-compress-btn" class="btn btn-secondary">Clear</button>
+                            <button id="copy-compress-btn" class="btn btn-success">Copy Result</button>
+                        </div>
+                    </div>
+                    
+                    <div class="output-section">
+                        <label for="compress-output">Compressed result:</label>
+                        <textarea id="compress-output" readonly rows="10"></textarea>
+                        <div class="status" id="compress-status"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features">
+                <h2>Tool Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h3>🔧 Multi-functional</h3>
+                        <p>Supports JSON formatting, string to JSON conversion, JSON validation, JSON compression and more</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⚡ High Performance</h3>
+                        <p>Pure frontend processing, no need to upload data to server, fast and secure</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔒 Safe & Reliable</h3>
+                        <p>Local processing, your data never leaves your browser, privacy protected</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📱 Responsive</h3>
+                        <p>Perfect for all devices, works great on mobile, tablet and desktop</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="usage-guide">
+                <h2>User Guide</h2>
+                <div class="guide-section">
+                    <h3>How to Use JSON Formatter Tool</h3>
+                    <ol>
+                        <li>Select the corresponding function tab (Format JSON, String to JSON, etc.)</li>
+                        <li>Paste or type your JSON string in the input box</li>
+                        <li>Click the corresponding processing button</li>
+                        <li>View the processing result in the output area</li>
+                        <li>Use the copy button to quickly copy the result</li>
+                    </ol>
+                </div>
+                
+                <div class="guide-section">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq">
+                        <h4>Q: What is JSON formatting?</h4>
+                        <p>A: JSON formatting converts compressed JSON strings into readable format with proper indentation and line breaks for easier reading and debugging.</p>
+                        
+                        <h4>Q: How to validate if JSON is correct?</h4>
+                        <p>A: Use our JSON validation feature, enter your JSON string and click the validate button. The system will tell you whether the JSON conforms to standard format.</p>
+                        
+                        <h4>Q: Will my data be uploaded to the server?</h4>
+                        <p>A: No. Our tool runs completely in your browser locally, no data is uploaded to any server, ensuring your data security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 JSON Formatter Tool. Professional online JSON processing tool.</p>
+            <p><a href="about.html">About Us</a> | Keywords: JSON formatter, JSON tool, string to JSON, JSON validator, JSON compressor</p>
+        </div>
+    </footer>
+    
+    <script src="../script.js"></script>
+</body>
+</html> 

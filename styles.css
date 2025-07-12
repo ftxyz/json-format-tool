@@ -39,6 +39,31 @@ header .subtitle {
     margin: 0 auto;
 }
 
+.language-switch {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.language-switch a {
+    color: white;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.language-switch a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+
+.language-switch a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    opacity: 1;
+}
+
 /* 主要内容样式 */
 main {
     padding: 3rem 0;
