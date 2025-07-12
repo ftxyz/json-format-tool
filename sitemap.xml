@@ -4,15 +4,21 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://formatjson.com/</loc>
-        <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+        <loc>https://jsonformat.top/</loc>
+        <lastmod>2025-01-12T00:00:00+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://formatjson.com/index.html</loc>
-        <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+        <loc>https://jsonformat.top/index.html</loc>
+        <lastmod>2025-01-12T00:00:00+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://jsonformat.top/about.html</loc>
+        <lastmod>2025-01-12T00:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset> 

@@ -2,7 +2,7 @@
   "name": "JSON格式化工具",
   "short_name": "JSON工具",
   "description": "专业的在线JSON格式化工具，支持字符串转JSON、JSON格式化、JSON验证、JSON压缩等功能",
-  "start_url": "/",
+  "start_url": "https://jsonformat.top/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#667eea",

@@ -12,7 +12,7 @@ Disallow: /tmp/
 Disallow: /*.txt$
 
 # 网站地图
-Sitemap: https://formatjson.com/sitemap.xml
+Sitemap: https://jsonformat.top/sitemap.xml
 
 # 爬虫延时设置
 Crawl-delay: 1 
