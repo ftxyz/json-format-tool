@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON格式化工具 - 在线字符串转JSON、JSON格式化验证工具</title>
+    <meta name="description" content="专业的在线JSON格式化工具，支持字符串转JSON、JSON格式化、JSON验证、JSON压缩等功能。免费、快速、安全的JSON处理工具。">
+    <meta name="keywords" content="JSON格式化,JSON工具,字符串转JSON,JSON验证,JSON压缩,在线JSON工具,JSON美化">
+    <meta name="author" content="JSON格式化工具">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://formatjson.com/">
+    <meta property="og:title" content="JSON格式化工具 - 在线字符串转JSON、JSON格式化验证工具">
+    <meta property="og:description" content="专业的在线JSON格式化工具，支持字符串转JSON、JSON格式化、JSON验证、JSON压缩等功能。">
+    <meta property="og:image" content="https://formatjson.com/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://formatjson.com/">
+    <meta property="twitter:title" content="JSON格式化工具 - 在线字符串转JSON、JSON格式化验证工具">
+    <meta property="twitter:description" content="专业的在线JSON格式化工具，支持字符串转JSON、JSON格式化、JSON验证、JSON压缩等功能。">
+    <meta property="twitter:image" content="https://formatjson.com/twitter-image.png">
+    
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "JSON格式化工具",
+        "description": "专业的在线JSON格式化工具，支持字符串转JSON、JSON格式化、JSON验证、JSON压缩等功能。",
+        "url": "https://formatjson.com",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "JSON格式化工具"
+        }
+    }
+    </script>
+    
+    <link rel="canonical" href="https://formatjson.com/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>JSON格式化工具</h1>
+            <p class="subtitle">专业的在线JSON处理工具，支持字符串转JSON、格式化、验证等功能</p>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="tool-section">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="format">格式化JSON</button>
+                    <button class="tab-btn" data-tab="stringify">字符串转JSON</button>
+                    <button class="tab-btn" data-tab="validate">验证JSON</button>
+                    <button class="tab-btn" data-tab="compress">压缩JSON</button>
+                </div>
+                
+                <div class="tab-content active" id="format">
+                    <h2>JSON格式化</h2>
+                    <div class="input-section">
+                        <label for="json-input">输入JSON字符串：</label>
+                        <textarea id="json-input" placeholder="请输入需要格式化的JSON字符串..." rows="10"></textarea>
+                        <div class="button-group">
+                            <button id="format-btn" class="btn btn-primary">格式化JSON</button>
+                            <button id="clear-btn" class="btn btn-secondary">清空</button>
+                            <button id="copy-btn" class="btn btn-success">复制结果</button>
+                        </div>
+                    </div>
+                    
+                    <div class="output-section">
+                        <label for="json-output">格式化结果：</label>
+                        <textarea id="json-output" readonly rows="10"></textarea>
+                        <div class="status" id="status"></div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="stringify">
+                    <h2>字符串转JSON</h2>
+                    <div class="input-section">
+                        <label for="string-input">输入字符串：</label>
+                        <textarea id="string-input" placeholder="请输入需要转换为JSON的字符串..." rows="10"></textarea>
+                        <div class="button-group">
+                            <button id="stringify-btn" class="btn btn-primary">转换为JSON</button>
+                            <button id="clear-string-btn" class="btn btn-secondary">清空</button>
+                            <button id="copy-string-btn" class="btn btn-success">复制结果</button>
+                        </div>
+                    </div>
+                    
+                    <div class="output-section">
+                        <label for="string-output">转换结果：</label>
+                        <textarea id="string-output" readonly rows="10"></textarea>
+                        <div class="status" id="string-status"></div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="validate">
+                    <h2>JSON验证</h2>
+                    <div class="input-section">
+                        <label for="validate-input">输入JSON字符串：</label>
+                        <textarea id="validate-input" placeholder="请输入需要验证的JSON字符串..." rows="10"></textarea>
+                        <div class="button-group">
+                            <button id="validate-btn" class="btn btn-primary">验证JSON</button>
+                            <button id="clear-validate-btn" class="btn btn-secondary">清空</button>
+                        </div>
+                    </div>
+                    
+                    <div class="validation-result" id="validation-result"></div>
+                </div>
+                
+                <div class="tab-content" id="compress">
+                    <h2>JSON压缩</h2>
+                    <div class="input-section">
+                        <label for="compress-input">输入JSON字符串：</label>
+                        <textarea id="compress-input" placeholder="请输入需要压缩的JSON字符串..." rows="10"></textarea>
+                        <div class="button-group">
+                            <button id="compress-btn" class="btn btn-primary">压缩JSON</button>
+                            <button id="clear-compress-btn" class="btn btn-secondary">清空</button>
+                            <button id="copy-compress-btn" class="btn btn-success">复制结果</button>
+                        </div>
+                    </div>
+                    
+                    <div class="output-section">
+                        <label for="compress-output">压缩结果：</label>
+                        <textarea id="compress-output" readonly rows="10"></textarea>
+                        <div class="status" id="compress-status"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features">
+                <h2>工具特性</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h3>🔧 多功能</h3>
+                        <p>支持JSON格式化、字符串转JSON、JSON验证、JSON压缩等多种功能</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>⚡ 高性能</h3>
+                        <p>纯前端处理，无需上传数据到服务器，快速且安全</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>🔒 安全可靠</h3>
+                        <p>本地处理，不会上传您的数据，保护隐私安全</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>📱 响应式</h3>
+                        <p>完美适配各种设备，手机、平板、电脑都能正常使用</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="usage-guide">
+                <h2>使用指南</h2>
+                <div class="guide-section">
+                    <h3>如何使用JSON格式化工具</h3>
+                    <ol>
+                        <li>选择相应的功能标签（格式化JSON、字符串转JSON等）</li>
+                        <li>在输入框中粘贴或输入您的JSON字符串</li>
+                        <li>点击对应的处理按钮</li>
+                        <li>在输出区域查看处理结果</li>
+                        <li>使用复制按钮快速复制结果</li>
+                    </ol>
+                </div>
+                
+                <div class="guide-section">
+                    <h3>常见问题</h3>
+                    <div class="faq">
+                        <h4>Q: 什么是JSON格式化？</h4>
+                        <p>A: JSON格式化是将压缩的JSON字符串转换为易读的、带有缩进和换行的格式，便于阅读和调试。</p>
+                        
+                        <h4>Q: 如何验证JSON是否正确？</h4>
+                        <p>A: 使用我们的JSON验证功能，输入JSON字符串后点击验证按钮，系统会告诉您JSON是否符合标准格式。</p>
+                        
+                        <h4>Q: 数据是否会被上传到服务器？</h4>
+                        <p>A: 不会。我们的工具完全在浏览器本地运行，不会上传任何数据到服务器，保证您的数据安全。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 JSON格式化工具. 专业的在线JSON处理工具.</p>
+            <p>关键词：JSON格式化, JSON工具, 字符串转JSON, JSON验证, JSON压缩</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
