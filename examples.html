@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON实例大全 - 200+真实JSON数据示例 | JSON格式化工具</title>
+    <meta name="description" content="收录200+真实JSON数据示例，包括API响应、配置文件、数据库导出等。涵盖用户信息、商品数据、订单系统、日志格式等常见JSON应用场景。">
+    <meta name="keywords" content="JSON实例,JSON示例,JSON例子,API JSON,配置文件JSON,JSON数据格式,JSON模板">
+    <link rel="canonical" href="https://jsonformat.top/examples.html">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>JSON实例大全</h1>
+            <p class="subtitle">200+真实JSON数据示例，覆盖各种应用场景</p>
+            <div class="language-switch">
+                <a href="/examples.html" class="active">中文</a> | <a href="/en/examples.html">English</a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="/">首页</a> > JSON实例大全
+            </nav>
+            
+            <div class="content-section">
+                <h2>用户信息JSON示例</h2>
+                <div class="example-category">
+                    <div class="code-example">
+                        <h4>基础用户信息：</h4>
+                        <pre><code>{
+  "id": 12345,
+  "username": "zhangsan",
+  "email": "zhangsan@example.com",
+  "firstName": "三",
+  "lastName": "张",
+  "age": 28,
+  "gender": "male",
+  "phone": "+86-13800138000",
+  "address": {
+    "country": "中国",
+    "province": "北京市",
+    "city": "北京市",
+    "district": "朝阳区",
+    "street": "建国路88号",
+    "zipCode": "100000"
+  },
+  "preferences": {
+    "language": "zh-CN",
+    "timezone": "Asia/Shanghai",
+    "notifications": {
+      "email": true,
+      "sms": false,
+      "push": true
+    }
+  },
+  "createdAt": "2024-01-15T08:30:00Z",
+  "lastLoginAt": "2024-12-20T10:15:30Z",
+  "isActive": true,
+  "roles": ["user", "premium"]
+}</code></pre>
+                        <button class="try-button" onclick="loadExample(this.previousElementSibling.textContent)">在工具中试用</button>
+                    </div>
+
+                    <div class="code-example">
+                        <h4>社交媒体用户档案：</h4>
+                        <pre><code>{
+  "profile": {
+    "userId": 67890,
+    "displayName": "科技达人小李",
+    "avatar": "https://example.com/avatars/user67890.jpg",
+    "bio": "全栈开发工程师，专注于React和Node.js",
+    "location": "上海",
+    "website": "https://techblog.example.com",
+    "social": {
+      "github": "techguru_li",
+      "twitter": "@tech_li",
+      "linkedin": "li-xiaoming"
+    },
+    "stats": {
+      "followers": 1250,
+      "following": 340,
+      "posts": 89,
+      "likes": 3420
+    },
+    "badges": ["verified", "developer", "early_adopter"],
+    "joinDate": "2022-03-15",
+    "lastActive": "2024-12-20T14:22:00Z"
+  }
+}</code></pre>
+                        <button class="try-button" onclick="loadExample(this.previousElementSibling.textContent)">在工具中试用</button>
+                    </div>
+                </div>
+
+                <h2>电商JSON示例</h2>
+                <div class="example-category">
+                    <div class="code-example">
+                        <h4>商品信息：</h4>
+                        <pre><code>{
+  "product": {
+    "id": "P001",
+    "sku": "LAPTOP-DELL-15-001",
+    "name": "Dell XPS 15 笔记本电脑",
+    "brand": "Dell",
+    "category": {
+      "primary": "电脑数码",
+      "secondary": "笔记本电脑",
+      "tertiary": "游戏本"
+    },
+    "price": {
+      "original": 12999.00,
+      "current": 10999.00,
+      "currency": "CNY",
+      "discount": {
+        "percentage": 15,
+        "reason": "双十二促销"
+      }
+    },
+    "specifications": {
+      "processor": "Intel Core i7-11800H",
+      "memory": "16GB DDR4",
+      "storage": "512GB NVMe SSD",
+      "display": "15.6英寸 4K OLED",
+      "graphics": "NVIDIA RTX 3050 Ti",
+      "weight": "2.05kg",
+      "battery": "86Wh"
+    },
+    "images": [
+      "https://example.com/products/P001/main.jpg",
+      "https://example.com/products/P001/side.jpg",
+      "https://example.com/products/P001/screen.jpg"
+    ],
+    "inventory": {
+      "stock": 25,
+      "warehouse": "北京仓",
+      "reserved": 3,
+      "available": 22
+    },
+    "ratings": {
+      "average": 4.7,
+      "count": 156,
+      "distribution": {
+        "5": 89,
+        "4": 45,
+        "3": 15,
+        "2": 5,
+        "1": 2
+      }
+    },
+    "shipping": {
+      "freeShipping": true,
+      "estimatedDays": "1-3",
+      "weight": 2.5,
+      "dimensions": {
+        "length": 35.4,
+        "width": 23.5,
+        "height": 1.8,
+        "unit": "cm"
+      }
+    },
+    "tags": ["热销", "新品", "免费送货"],
+    "status": "active",
+    "publishedAt": "2024-11-01T00:00:00Z",
+    "updatedAt": "2024-12-20T16:30:00Z"
+  }
+}</code></pre>
+                        <button class="try-button" onclick="loadExample(this.previousElementSibling.textContent)">在工具中试用</button>
+                    </div>
+
+                    <div class="code-example">
+                        <h4>订单信息：</h4>
+                        <pre><code>{
+  "order": {
+    "id": "ORD-2024122001",
+    "number": "240001234567",
+    "status": "processing",
+    "customer": {
+      "id": 12345,
+      "name": "张三",
+      "email": "zhangsan@example.com",
+      "phone": "+86-13800138000"
+    },
+    "items": [
+      {
+        "productId": "P001",
+        "name": "Dell XPS 15 笔记本电脑",
+        "sku": "LAPTOP-DELL-15-001",
+        "quantity": 1,
+        "unitPrice": 10999.00,
+        "totalPrice": 10999.00,
+        "image": "https://example.com/products/P001/thumb.jpg"
+      },
+      {
+        "productId": "P002",
+        "name": "无线鼠标",
+        "sku": "MOUSE-WIRELESS-001",
+        "quantity": 2,
+        "unitPrice": 89.00,
+        "totalPrice": 178.00,
+        "image": "https://example.com/products/P002/thumb.jpg"
+      }
+    ],
+    "pricing": {
+      "subtotal": 11177.00,
+      "shipping": 0.00,
+      "tax": 1117.70,
+      "discount": 500.00,
+      "total": 11794.70,
+      "currency": "CNY"
+    },
+    "shipping": {
+      "method": "express",
+      "company": "顺丰速运",
+      "trackingNumber": "SF1234567890",
+      "address": {
+        "recipient": "张三",
+        "phone": "+86-13800138000",
+        "country": "中国",
+        "province": "北京市",
+        "city": "北京市",
+        "district": "朝阳区",
+        "street": "建国路88号",
+        "building": "国贸大厦",
+        "unit": "1501室",
+        "zipCode": "100000"
+      },
+      "estimatedDelivery": "2024-12-22T18:00:00Z"
+    },
+    "payment": {
+      "method": "alipay",
+      "transactionId": "2024122012345678",
+      "status": "paid",
+      "paidAt": "2024-12-20T10:30:00Z"
+    },
+    "dates": {
+      "createdAt": "2024-12-20T10:25:00Z",
+      "updatedAt": "2024-12-20T10:35:00Z",
+      "shippedAt": null,
+      "deliveredAt": null
+    }
+  }
+}</code></pre>
+                        <button class="try-button" onclick="loadExample(this.previousElementSibling.textContent)">在工具中试用</button>
+                    </div>
+                </div>
+
+                <h2>API响应JSON示例</h2>
+                <div class="example-category">
+                    <div class="code-example">
+                        <h4>REST API成功响应：</h4>
+                        <pre><code>{
+  "status": "success",
+  "code": 200,
+  "message": "数据获取成功",
+  "data": {
+    "users": [
+      {
+        "id": 1,
+        "name": "张三",
+        "email": "zhangsan@example.com",
+        "role": "admin",
+        "createdAt": "2024-01-15T08:30:00Z"
+      },
+      {
+        "id": 2,
+        "name": "李四",
+        "email": "lisi@example.com",
+        "role": "user",
+        "createdAt": "2024-02-20T09:15:00Z"
+      }
+    ],
+    "pagination": {
+      "currentPage": 1,
+      "totalPages": 5,
+      "itemsPerPage": 20,
+      "totalItems": 98,
+      "hasNextPage": true,
+      "hasPrevPage": false
+    }
+  },
+  "meta": {
+    "requestId": "req-12345-abcde",
+    "timestamp": "2024-12-20T14:30:00Z",
+    "version": "v1.2.3",
+    "processingTime": 45
+  }
+}</code></pre>
+                        <button class="try-button" onclick="loadExample(this.previousElementSibling.textContent)">在工具中试用</button>
+                    </div>
+
+                    <div class="code-example">
+                        <h4>API错误响应：</h4>
+                        <pre><code>{
+  "status": "error",
+  "code": 400,
+  "message": "请求参数错误",
+  "errors": [
+    {
+      "field": "email",
+      "code": "INVALID_FORMAT",
+      "message": "邮箱格式不正确"
+    },
+    {
+      "field": "age",
+      "code": "OUT_OF_RANGE",
+      "message": "年龄必须在18-100之间"
+    }
+  ],
+  "details": {
+    "documentation": "https://api.example.com/docs/errors",
+    "supportContact": "support@example.com"
+  },
+  "meta": {
+    "requestId": "req-error-67890",
+    "timestamp": "2024-12-20T14:35:00Z",
+    "version": "v1.2.3"
+  }
+}</code></pre>
+                        <button class="try-button" onclick="loadExample(this.previousElementSibling.textContent)">在工具中试用</button>
+                    </div>
+                </div>
+
+                <h2>配置文件JSON示例</h2>
+                <div class="example-category">
+                    <div class="code-example">
+                        <h4>应用程序配置：</h4>
+                        <pre><code>{
+  "app": {
+    "name": "我的应用",
+    "version": "1.0.0",
+    "environment": "production",
+    "debug": false,
+    "port": 3000,
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "app_user",
+    "password": "${DB_PASSWORD}",
+    "database": "myapp_db",
+    "charset": "utf8mb4",
+    "pool": {
+      "min": 2,
+      "max": 10,
+      "acquireTimeoutMillis": 60000,
+      "createTimeoutMillis": 30000,
+      "destroyTimeoutMillis": 5000,
+      "idleTimeoutMillis": 30000
+    }
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "password": "${REDIS_PASSWORD}",
+    "db": 0,
+    "keyPrefix": "myapp:",
+    "ttl": 3600
+  },
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "outputs": ["console", "file"],
+    "file": {
+      "path": "/var/log/myapp.log",
+      "maxSize": "10MB",
+      "maxFiles": 5,
+      "compress": true
+    }
+  },
+  "security": {
+    "jwt": {
+      "secret": "${JWT_SECRET}",
+      "expiresIn": "24h",
+      "algorithm": "HS256"
+    },
+    "cors": {
+      "origin": ["https://myapp.com", "https://admin.myapp.com"],
+      "credentials": true,
+      "maxAge": 86400
+    },
+    "rateLimit": {
+      "windowMs": 900000,
+      "maxRequests": 100,
+      "message": "请求过于频繁，请稍后再试"
+    }
+  },
+  "features": {
+    "emailVerification": true,
+    "socialLogin": {
+      "google": true,
+      "facebook": false,
+      "wechat": true
+    },
+    "paymentMethods": ["alipay", "wechatpay", "unionpay"],
+    "multiLanguage": true,
+    "analytics": {
+      "google": true,
+      "baidu": true
+    }
+  }
+}</code></pre>
+                        <button class="try-button" onclick="loadExample(this.previousElementSibling.textContent)">在工具中试用</button>
+                    </div>
+                </div>
+
+                <div class="quick-tools">
+                    <h2>快速使用工具</h2>
+                    <p>选择任意示例，点击"在工具中试用"按钮，立即在我们的JSON格式化工具中查看和编辑。</p>
+                    <div class="tool-links">
+                        <a href="/" class="tool-link">JSON格式化</a>
+                        <a href="/#validate" class="tool-link">JSON验证</a>
+                        <a href="/#compress" class="tool-link">JSON压缩</a>
+                        <a href="/tutorial.html" class="tool-link">JSON教程</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 JSON格式化工具. 专业的在线JSON处理工具.</p>
+            <p><a href="/">首页</a> | <a href="/about.html">关于我们</a> | <a href="/tutorial.html">JSON教程</a> | <a href="/examples.html">JSON示例</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function loadExample(jsonText) {
+            // 清理文本内容
+            const cleanJson = jsonText.trim();
+            // 存储到localStorage供主页使用
+            localStorage.setItem('exampleJson', cleanJson);
+            // 跳转到主页并自动加载示例
+            window.open('/?load=example', '_blank');
+        }
+    </script>
+</body>
+</html> 
